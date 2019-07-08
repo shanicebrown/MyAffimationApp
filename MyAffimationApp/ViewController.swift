@@ -8,13 +8,29 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+    {
 
-    override func viewDidLoad() {
+    @IBOutlet weak var myAffirmationTextField: UITextField!
+    
+    
+    @IBOutlet weak var myAffirmationLabel: UILabel!
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
     }
-
+    
+    
+    @IBAction func whenAffirmButtonPressed(_ sender: Any)
+    {
+        let labelsText = myAffirmationLabel.text!
+        let textfieldsText = myAffirmationTextField.text!
+        
+        myAffirmationLabel.text = labelsText + textfieldsText + "\n"
+        
+    }
+    
 
 }
 
